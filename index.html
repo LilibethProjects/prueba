@@ -9,41 +9,122 @@
     <title>Insertar Datos PHP</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link href="../prueba/style.css" rel="stylesheet">
 </head>
 
-<body class="bg-dark d-flex justify-content-center align-items-center" style="height: 100vh">
+<body class=" d-flex justify-content-center align-items-center" style="height: 100vh">
+    
 
-    <div class="container bg-white rounded shadow p-4 col-xl-4 col-lg-6">
+    <div class="container bg-white rounded shadow p-4 col-xl-4 col-lg-4">
 
-        <h2 class="w-100 text-center mb-4">Registre los usuarios</h2>
-
-        <hr style="color: #9999" />
-
+        <p class="w-100 text-center mb-4">AGREGAR CONTACTOS</p>
         <form id="formulario" method="POST">
 
-            <div class="mb-3">
-                <label for="txt_nombre" class="form-label">Nombre de Contacto</label>
+            <div>
+                <label for="txt_nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="txt_nombre" name="txt_nombre" placeholder="Ingrese el nombre">
             </div>
 
-            <div class="mb-3">
-                <label for="txt_apellido" class="form-label" >Apellido de Contacto</label>
+            <div >
+                <label for="txt_apellido" class="form-label" >Apellido</label>
                 <input type="text" class="form-control" id="txt_apellido" name="txt_apellido" placeholder="Ingrese el apellido">
             </div>
 
-            <div class="mb-3" >
-                <label for="txt_telefono" class="form-label">Telefono de Contacto></label>
+            <div >
+                <label for="txt_telefono" class="form-label">Telefono</label>
                 <input type="text" class="form-control" id="txt_telefono" name="txt_telefono" placeholder="Ingrese el telefono">
             </div>
 
-            <button type="submit" class="btn btn-primary w-100 text-uppercase fw-bold">Insertar</button>
+            <button type="submit" class="btn_background btn btn-primary w-100 text-uppercase fw-bold">Insertar</button>
 
         </form>
+        <div>
+        <p>Mis Contactos</p>
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Telefono</th>
+                    </tr>
+                </thead>
+                <tbody id="table_data"></tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="container bg-white rounded shadow p-4 col-xl-4 col-lg-4">
+
+        <p class="w-100 text-center mb-4">AGREGAR NOTAS</p>
+
+        <hr style="color: #9999" />
+
+        <form id="formulario_nota" method="POST">
+
+            <div >
+                <label for="txt_titulo" class="form-label">Titulo de la Nota</label>
+                <input type="text" class="form-control" id="txt_titulo" name="txt_titulo" placeholder="Ingrese el titulo">
+            </div>
+
+            <div >
+                <label for="txt_descripcion" class="form-label" >Descripcion</label>
+                <input type="text" class="form-control" id="txt_descripcion" name="txt_descripcion" placeholder="Ingrese la descripcion">
+            </div>
+
+          <button type="submit" class="btn_background btn btn-primary w-100 text-uppercase fw-bold">Insertar Nota</button>
+
+        </form>
+        <div>
+        <p>MIS NOTAS</p>
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Descripcion </th>
+                    </tr>
+                </thead>
+                <tbody id="table_data_nota"></tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="container bg-white rounded shadow p-4 col-xl-4 col-lg-4">
+
+        <p class="w-100 text-center mb-4">AGREGAR TAREAS</p>
+
+        <form id="formulario_tarea" method="POST">
+
+            <div >
+                <label for="txt_descripcion_tarea" class="form-label">Descripcion tarea</label>
+                <input type="text" class="form-control" id="txt_descripcion_tarea" name="txt_descripcion_tarea" placeholder="Ingrese la tarea">
+            </div>
+
+            <div >
+                <label for="txt_testado_area" class="form-label" >Estado tarea</label>
+                <input type="text" class="form-control" id="txt_estado_tarea" name="txt_estado_tarea" placeholder="Ingrese el estado de la tarea">
+            </div>
+
+            <button type="submit" class="btn_background btn btn-primary w-100 text-uppercase fw-bold">Insertar</button>
+
+        </form>
+        <div>
+        <p>MIS TAREAS</p>
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Descripcion</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="table_data_tarea"></tbody>
+            </table>
+        </div>
 
     </div>
 
     <script src="app.js"></script>
+    <script src="app_tarea.js"></script>
+    <script src="app_nota.js"></script>
 
 </body>
 </html>
